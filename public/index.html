@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Just Draw</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+	<div id="nickpage">
+		<img class="logo" src="img/Logo.svg" alt="Just Draw">
+		<input placeholder="Выберите имя" type="text" class="nickform">
+		<div class="nickbutton">Принять</div>
+		<img class="red" src="img/RedSplash.svg" ondragstart="return false">
+		<img class="blue" src="img/BlueSplash.svg" ondragstart="return false">
+	</div>
+	<div id="roompage">
+		<div class="modwords">
+			<div class="modwords_background"></div>
+			<div class="modwords_text">Введите слова</div>
+			<form action="" class="modwords_form">
+				<div class="modwords_form_inputdiv">
+					<textarea class="modwords_form_input" type="textarea"></textarea>
+				</div>
+				<div class="modwords_form_submit" type="submit">Принять</div>
+			</form>
+			<img src="img/Close.svg" alt="Закрыть" class="modwords_close">
+		</div>
+		<div class="password">
+			<div class="password_background"></div>
+			<div class="password_text">Введите пароль</div>
+			<form action="" class="password_form">
+				<input class="password_form_input" type="text">
+				<div class="password_form_submit" type="submit">Принять</div>
+			</form>
+			<img src="img/Close.svg" alt="Закрыть" class="password_close">
+		</div>
+
+		<div class="background">
+			<div class="filter"></div>
+			<img class="red" src="img/RedSplash.svg">
+			<img class="blue" src="img/BlueSplash.svg">
+		</div>
+		<img src="img/refresh.svg" alt="refresh rooms" class="refresh">
+		<div class="roomsmenu">
+			<div class="usercontainer">
+				Enotvtapke
+			</div>
+			<div class="menuattrscontainer">
+				<div class="menuattrs">
+					<p class="menuattr">Название</p>
+					<p class="menuattr">Тип</p>
+					<p class="menuattr">Раунд</p>
+					<p class="menuattr">Игроки</p>
+					<img class="menuattr" src="img/lock.svg" alt="password">
+				</div>
+			</div>
+			<div class="leftmenu">
+				<div class="createroommenu">
+					<div class="param">
+						<p class="paramname">Название</p>
+					</div>
+					<div class="param">
+						<input type="text" class="roomtitleform">
+					</div>
+					<div class="param">
+						<p class="paramname">Макс игроков</p>
+					</div>
+					<div class="param param4">
+						<div class="choosenumber">
+							<input class="numberinput" id="maxplayers" type="number" maxlength="1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" max="8" size="1" min="2" value="5" max="8" size="1">
+							<div class="reduce" id="maxplayers_increase">
+								<img class="arrowimg" src="img/UpArrow.svg" alt="">
+							</div>
+							<div class="increase" id="maxplayers_reduce">
+								<img class="arrowimg" src="img/DownArrow.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="param">
+						<p class="paramname">Раундов</p>
+					</div>
+					<div class="param param4">
+						<div class="choosenumber">
+							<input class="numberinput" id="rounds"  maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" max="50" size="2" min="5" value=15>
+							<div class="reduce" id="rounds_increase">
+								<img class="arrowimg" src="img/UpArrow.svg" alt="">
+							</div>
+							<div class="increase" id="rounds_reduce">
+								<img class="arrowimg" src="img/DownArrow.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="param">
+						<p class="paramname">Время раунда</p>
+					</div>
+					<div class="param">
+						<input type="number" class="roomtitleform" size="3" max="720" min="20" id="roundtime" value="120" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+						<div class="sec">сек</div>
+					</div>
+					<div class="param">
+						<p class="paramname">Список слов</p>
+					</div>
+					<div class="param">
+						<div class="switchwendor">
+							<input type="radio" name="mode" value="classic" checked id="radioclassic">
+							<input type="radio" name="mode" value="modded" id="radiomodded">
+						</div>
+						<div class="toggle">
+							<label for="radioclassic" class="toggleattr classic">classic</label>
+							<label for="radiomodded" class="toggleattr modded">modded</label>
+							<div class="toggler"></div>
+						</div>
+					</div>
+					<div class="param">
+						<p class="paramname">Пароль</p>
+					</div>
+					<div class="param">
+						<input type="text" class="roomtitleform" id="roompassword" maxlength="20">
+					</div>
+				</div>
+				<div class="leftmenubuttton" id="quickplay">
+					<
+				</div>
+				<div class="leftmenubuttton" id="createroom">
+					Создать комнату
+				</div>
+				<div class="leftmenucreatebuttton" id="accept">
+					<img class="leftmenucreatebutttonimg" src="img/Accept.svg" alt="Принять">
+				</div>
+				<div class="leftmenucreatebuttton" id="refuse">
+					<img class="leftmenucreatebutttonimg" src="img/Close.svg" alt="Отклонить">
+				</div>
+			</div>
+		</div>
+		<div class="rooms">
+			<!--<div class="room" id="Qwerty">
+				<div class="roomcrutch1 roomcrutch">
+					<p class="roomattr roomattr1">Qwerty</p>
+				</div>
+				<div class="roomcrutch2 roomcrutch">
+					<p class="roomattr">classic</p>
+				</div>
+				<div class="roomcrutch3 roomcrutch">
+					<p class="roomattr">10 / 15</p>
+				</div>
+				<div class="roomcrutch4 roomcrutch">
+					<p class="roomattr">5 / 8</p>
+				</div>
+			</div>-->
+		</div>
+	</div>
+	<div id="gamepage">
+		<div class="moddedwords">
+			
+		</div>
+		<div class="toolpanel_mask"></div>
+		<div class="exit">
+			<img class="exitbutton" src="img/Exit.svg" alt="Выйти" onselectstart="return false" onmousedown="return false">
+		</div>
+		<div class="toolpanel">
+			<img class="choosecolor" src="img/ChooseColor.svg" alt="">
+			<div id="color_picker"></div>
+			<div class="colors">
+				<div class="color" id="color1"></div>
+				<div class="color" id="color2"></div>
+				<div class="color" id="color3"></div>
+				<div class="color" id="color4"></div>
+				<div class="color" id="color5"></div>
+			</div>
+			<div class="chooswidth">
+				<input class="chooswidthslider" orient="vertical" type="range" step="0.05" value="4.5" min="1" max="10">
+			</div>
+			<div class="erase">
+				<img src="img/Eraser.svg" alt="Очистить" class="eraser" onselectstart="console.log (1); return false">
+			</div>
+		</div>
+		<div id="canvdiv" class="paintcanvas">
+			<canvas id="canvas" onmouseout="out()" style="display: block;">Canvas can not be download</canvas>
+		</div>
+		<ul id="keyword">
+		</ul>
+		<div id="progressbar">
+			<div id="bar"></div>
+			<div id="filler"></div>
+		</div>
+		<div class="winscreen">
+			<div class="winscreenattr" id="keywordshow"></div>
+			<div class="winscreenattr" id="drawer">Рисовал: <em id="drawerNick"></em></div>
+			<div class="winscreenattr" id="roundwinner">Угадал: <em id="winnerNick"></em></div>
+		</div>
+		<div class="finalscreen">
+			<div>
+				<div class="finalscreenattr" id="final_keywordshow">Uranus</div>
+				<div class="finalscreenattr" id="final_drawer">Рисовал: <em id="final_drawerNick">BAckman</em></div>
+				<div class="finalscreenattr" id="final_roundwinner">Угадал: <em id="final_winnerNick">GABEn</em></div>
+			</div>
+			<div>
+				<div class="finalscreenattr" id="final_title">Игра окончена</div>
+				<div id="final_score">
+					<div id="final_score_list">
+						<div class="players_player">
+							<div class="player_name">1. Enot</div>
+							<div class="player_points">12</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">2. Владимир Путин</div>
+							<div class="player_points">30</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">3. I <З this game</div>
+							<div class="player_points">30</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">4. McMaks</div>
+							<div class="player_points">45</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">1. Enot</div>
+							<div class="player_points">12</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">2. Владимир Путин</div>
+							<div class="player_points">30</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">3. I <З this game</div>
+							<div class="player_points">30</div>
+						</div>
+						<div class="players_player">
+							<div class="player_name">4. McMaks</div>
+							<div class="player_points">45</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="finalscreenattr" id="waiting_for_game">ожидание следующей игры...</div>
+		</div>
+		<div class="choosescreen">
+			<div class="winscreenattr" id="chooseword">Выберите слово</div>
+			<div class="keywordslist">
+				<div class="chooseword" id="firstword"></div>
+				<div class="chooseword" id="secondword"></div>
+				<div class="chooseword" id="thirdword"></div>
+			</div>
+		</div>
+		<div class="chatbox">
+			<div class="players_list">
+				<div class="roundbox">Раунд <em id="round">13</em> из <em id="maxround">15</em></div>
+				<div class="players_list_players">
+				</div>
+			</div>
+			<div class="messages">
+			</div>
+			<div class="inputmessagebox">
+				<form class="msgform">
+					<input type="text" class="inputmessage" placeholder="Введите сообщение">
+					<div class="sendmsg" type="submit">
+						<img class="sendmsgimg" src="img/Send.svg" alt="Отправить">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/websock.js"></script>
+</footer>

@@ -1,0 +1,1544 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* html5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: "Roboto Condensed" !important;
+}
+
+input:focus {
+	outline: none;
+}
+
+img {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.error {
+	display: block;
+	position: absolute;
+	z-index: 500;
+	color: #F74A4A;
+	font-size: 14px;
+	text-align: center;
+	width: calc(100% - 19px);
+}
+
+.erinput {
+	color: #F74A4A !important;
+	border-color: #F74A4A !important;
+}
+
+/*++++++++++ Nickpage ++++++++++*/
+
+.logo {
+	position: absolute;
+	left: 50%;
+	top: 8.0696%;
+	margin-left: -217.8px;
+	z-index: 100;
+}
+
+/*  
+	::-webkit-input-placeholder {color:#000000; opacity:1;}
+  	::-moz-placeholder          {color:#000000; opacity:1;}
+  	:-moz-placeholder           {color:#000000; opacity:1;}
+  	:-ms-input-placeholder      {color:#000000; opacity:1;}
+
+  	webkit
+  	Firefox 19+
+  	Firefox 18-
+  	IE
+*/
+
+.nickform {
+	position: absolute;
+	color: #262626;
+	line-height: 25px;
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	text-align: center;
+	top: 52.215%;
+	left: 50%;
+	margin-left: -119.5px;
+	width: 235px;
+	height: 25px;
+	border: 2px solid #4C4C4C;
+	border-radius: 8px;
+	padding: 0px;
+	z-index: 100;
+}
+
+.nickform::-webkit-input-placeholder {
+	line-height: 25px;
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	color: #8C8A8A;
+	opacity: 1;
+	text-align: center;
+}
+
+.nickbutton {
+	position: absolute;
+	left: 50%;
+	top: calc(52.215% + 38px);
+	margin-left: -47px;
+	width: 94px;
+	height: 25px;
+	border-radius: 10px;
+	color: #fff;
+	background-color: #4C4C4C; 
+	text-align: center;
+	line-height: 25px;
+	font-weight: bold;
+	letter-spacing: calc(0.14 * 1em);
+	font-size: 15px;
+	z-index: 100;
+}
+
+.nickbutton:hover {
+	cursor: pointer;
+}
+
+.red {
+	position: fixed;
+	bottom: 7px;
+	left: 57px;
+	left: 4.176%;
+	z-index: -2;
+	height: 373px;
+}
+
+.blue {
+	position: fixed;
+	right: 26px;
+	right: 1.905%;
+	top: 0px;
+	z-index: -2;
+}
+
+/*---------- Nickpage over ----------*/
+
+/*++++++++++ Roompage ++++++++++*/
+
+#roompage {
+	display: none;
+}
+
+.refresh {
+	position: fixed;
+	top: 11px;
+	left: calc(23.077% - 35px);
+	z-index: 200;
+}
+
+.refresh:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+/*Top menu*/
+
+.roomsmenu {
+	z-index: 100;
+}
+
+.usercontainer {
+	position: fixed;
+	height: 45px;
+	width: calc(23.077% - 14px);
+	line-height: 45px;
+	color: #fff;
+	padding-left: 14px;
+	background-color: #2C2C2C;
+	font-size: 24px;
+}
+
+.menuattrscontainer {
+	position: fixed;
+	left: calc(23.077% + 3px);
+	height: 45px;
+	width: calc(76.923% - 3px);
+	background-color: #2C2C2C;
+	color: #fff;
+	font-size: 24px;
+	justify-content: space-between;
+	z-index: 300;
+}
+
+.menuattrs {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+.menuattr {
+	line-height: 45px;
+}
+
+/*Left menu*/
+
+.leftmenu {
+	position: fixed;
+	top: 45px;
+	width: 23.077%;
+	height: calc(100% - 45px);
+	border-right: 3px solid #2C2C2C;
+}
+
+.modwords, .password {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 600;
+}
+
+.modwords_background, .password_background {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(44, 44, 44, 0.85);
+}
+
+.modwords_form_inputdiv {
+	position: absolute;
+	height: 374px;
+	width: 504px;
+	left: 50%; 
+	margin-left:-252px;
+	border: 2px solid #2b2b2b ;
+	border-radius: 20px;
+	top: 50%;
+	margin-top:-187px;
+	padding: 10px 10px;
+	background-color: #fff;
+	resize: none;
+}
+
+
+.modwords_form_input:focus {
+	outline: none;
+}
+
+.modwords_form_input {
+	font-size: 14px;
+	resize: none;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	font-family: "Roboto Condensed";
+	border: none;
+}
+
+.password_form_input {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: -111px;
+	padding-left: 9px;
+	padding-right: 9px;
+	width: 200px;
+	color: #262626;
+	line-height: 25px;
+	height: 25px;
+	font-family: "Roboto Condensed";
+	font-size: 20px;
+	border: 2px solid #2C2C2C;
+	border-radius: 8px;
+	text-align: center;
+
+}
+
+.modwords_form_submit {
+	position: absolute;
+	width: 504px;
+	color: #fff;
+	font-size: 25px;
+	left: 50%; 
+	margin-left:-252px;
+	top: 50%;
+	margin-top: 220px;
+	padding-left: 5px;
+}
+
+.password_form_submit {
+	position: absolute;
+	width: 100px;
+	color: #fff;
+	font-size: 23px;
+	left: 50%; 
+	margin-left:-50px;
+	top: calc(40% + 39px);
+	text-align: center;
+}
+
+.modwords_form_submit:hover, .password_form_submit:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.modwords_text {
+	position: absolute;
+	width: 504px;
+	height: 374px;
+	color: #fff;
+	font-size: 25px;
+	left: 50%; 
+	margin-left:-252px;
+	top: 50%;
+	margin-top:-220px;
+	padding-left: 5px;
+}
+
+.password_text {
+	text-align: center;
+	position: absolute;
+	color: #fff;
+	font-size: 23px;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+	top: calc(40% - 33px);
+}
+
+.modwords_close, .password_close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+.modwords_close:hover, .password_close:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+/*Кнопки*/
+
+.leftmenubuttton {
+	position: fixed;
+	bottom: 0px;
+	background-color: #2C2C2C;
+	height: 45px;
+	width: calc(23.077% / 2 - 0.5px);
+	line-height: 45px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+.leftmenucreatebuttton {
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	height: 45px;
+	width: calc(23.077% / 2 - 0.5px);
+	line-height: 45px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+#quickplay {
+	position: absolute;
+	width: 45px;
+}
+
+#createroom {
+	position: absolute;
+	width: calc(100% - 46px);
+	right: 0;
+}
+
+.leftmenubuttton:hover {
+	background-color: #1c1c1c;
+	cursor: pointer;
+}
+
+#accept {
+	background-color: #5C9226;
+	z-index: 200;
+}
+
+#accept:hover {
+	background-color: #7DC732;
+	cursor: pointer;
+}
+
+#refuse {
+	position: absolute;
+	width: calc(100% / 2 - 0.5px);
+	background-color: #C73838;
+	z-index: 200;
+	right: 0;
+}
+
+#refuse:hover {
+	background-color: #F74A4A;
+	cursor: pointer;
+}
+
+.leftmenucreatebutttonimg {
+	margin-top: 8px;
+}
+
+/*Createroommenu*/
+
+.createroommenu {
+	display: none;
+	width: 100%;
+	position: absolute;
+	bottom: 45px;
+	height: calc(100% - 45px);
+	overflow-y: scroll;
+}
+
+.param {
+	height: 45px;
+	padding-left: 14px;
+}
+
+.paramname {
+	line-height: 45px;
+	color: #4C4C4C;
+	font-size: 22px;
+}
+
+.roomtitleform {
+	margin-left: -2px;
+	padding-left: 9px;
+	padding-right: 9px;
+	width: calc(74.603% - 9px);
+	margin-top: 10px;
+	color: #262626;
+	line-height: 21px;
+	height: 21px;
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	border: 2px solid #4C4C4C;
+	border-radius: 8px;
+}
+
+.param4 {
+	padding-top: 1px;
+}
+
+.choosenumber {
+	background-color: #fff;
+	margin-top: 9px;
+	margin-left: -2px;
+	height: 21px;
+	width: 41px;
+	border: 2px solid #4C4C4C;
+	border-radius: 8px;
+}
+
+.numberinput {
+	color: #4C4C4C;
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	padding: 0;
+	padding-left: 8px;
+	padding-right: 5px;
+	text-align: center;
+	height: 21px;
+	line-height: 21px;
+	border: none;
+	width: 16px;
+	margin: 0;
+	border-radius: 8px;
+	background-color: #FFFFFF00;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.increase {
+	position: absolute;
+	left: 41px;
+	top: 155px;
+	height: 15px;
+	width: 15px;
+}
+
+.increase:hover {
+	cursor: pointer;
+}
+
+#rounds_increase {
+	top: 236px;
+}
+
+.reduce {
+	position: absolute;
+	left: 41px;
+	top: 145px;
+	height: 15px;
+	width: 15px;
+}
+
+.reduce:hover {
+	cursor: pointer;
+}
+
+#rounds_reduce {
+	top: 246px;
+}
+
+.arrowimg {
+	position: absolute;
+	left: 2.5px;
+	top: 5px;
+}
+
+#roundtime {
+	text-align: center;
+	width: 25px;	
+}
+
+.sec {
+	display: inline;
+	color: #4C4C4C;
+	font-size: 16px;
+	font-family: "Roboto Condensed";
+}
+
+/*Toggle button*/
+
+.toggle {
+	position: absolute;
+	top: 417px;
+	left: 16px;
+	background-color: #fafafa;
+	width: 140px;
+	height: 21px;
+	border: 2px solid #4C4C4C;
+	border-radius: 5px;
+	z-index: 500;
+}
+
+.toggleattr {
+	height: 21px;
+	width: 70px;
+	text-align: center;
+	line-height: 21px;
+	z-index: 500;
+	transition: color 400ms;
+	cursor: pointer !important;
+}
+
+.toggler {
+	position: absolute;
+	height: 21px;
+	width: 76px;
+	background-color: #4C4C4C;
+	border-radius: 5px;
+	top: 0px;
+	left: -2px;
+	z-index: 200;
+	transition: left 400ms, right 400ms;
+}
+
+.classic {
+	position: absolute;
+	color: #fff;
+}
+
+.modded {
+	position: absolute;
+	left: 70px;
+	color: #4C4C4C;
+	cursor: pointer;
+}
+
+.switchwendor {
+	display: none;
+}
+
+#roompassword {
+	width: 80px;
+}
+
+/*Полосы прокрутки*/
+
+/* хром, сафари */
+.createroommenu::-webkit-scrollbar { width: 0; }
+ 
+/* ie 10+ */
+.createroommenu { -ms-overflow-style: none; }
+ 
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.createroommenu { overflow: -moz-scrollbars-none; }
+
+/*Background*/
+
+.filter {
+	position: fixed;
+	background-color: #FAFAFA;
+	opacity: 0.7;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+/*Rooms*/
+
+.rooms {
+	position: absolute;
+	width: calc(76.923% - 3px);
+	left: calc(23.077% + 3px);
+	top: 45px;
+	overflow-y: scroll;
+}
+
+.rooms::-webkit-scrollbar { width: 0; }
+ 
+/* ie 10+ */
+.rooms { -ms-overflow-style: none; }
+ 
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.rooms { overflow: -moz-scrollbars-none; }
+
+
+.room {
+	padding-left: 14px;
+	padding-right: 14px;
+	display: flex;
+	justify-content: space-between;
+	height: 45px;
+}
+
+.room:hover {
+	background-color: rgba(237, 237, 237, 0.7);
+	cursor: pointer;
+}
+
+.roomcrutch {
+	display: inline;
+	text-align: center;
+}
+
+.roomcrutch1 {
+	text-align: left;
+	width: 96.34px;
+}
+
+.roomcrutch2 {
+	width: 35.67px;
+}
+
+.roomcrutch3 {
+	width: 59.58px;
+}
+
+.roomcrutch4 {
+	width: 71.39px;
+}
+
+.roomcrutch5 {
+	width: 23px;
+}
+
+
+.roomattr1 {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.roomattr {
+	margin-left: -50%;
+	margin-right: -50%;
+	display: inline;
+	line-height: 45px;
+	font-size: 22px;
+	color: #2C2C2C;
+	text-align: center;
+}
+
+/*---------- Roompage over ----------*/
+
+/*++++++++++ Gamepage ++++++++++*/
+
+.paintcanvas {
+	position: absolute;
+	left: 45px;
+	width: calc(100% - 349px);
+	height: 100%;
+}
+
+#canvas {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#gamepage {
+	display: none;
+}
+
+.toolpanel {
+	position: fixed;
+	width: 45px;
+	height: 100%;
+	background-color: #2C2C2C;
+	z-index: 500;
+}
+
+.toolpanel_mask {
+	position: fixed;
+	display: block;
+	width: 45px;
+	height: 100%;
+	background-color: rgba(44, 44, 44, 0.7);
+	z-index: 501;
+}
+
+.choosecolor {
+	position: fixed;
+	left: 10px;
+	top: 15px;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/*++++++++++ColorPicker+++++++++++*/
+#color_picker {
+	position: absolute;
+	display: none;
+    left: 40px;
+}
+
+#rgbValue, #hslaValue {
+    float: right;
+}
+
+.container {
+    overflow: auto;
+}
+
+#showPicker {
+    float: left;
+}
+
+.colorPicker {
+    display: inline-block;
+}
+
+.colorPicker .extras {
+    float: right;
+    margin: 0.5em;
+}
+
+.colorPicker .extras .currentColorContainer {
+    overflow: hidden;
+}
+
+.colorPicker .extras .currentColor {
+    float: right;
+    width: 65px;
+    height: 30px;
+    border: 1px solid #BBB;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+}
+
+.colorPicker .extras .colorFields {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.colorPicker .extras .color {
+    text-align: right;
+}
+
+.colorPicker .extras .colorFields input {
+    width: 40px;
+    margin-left: 0.5em;
+}
+
+.colorPicker .extras .hex {
+    float: right;
+}
+
+.colorPicker .extras .hex input {
+    width: 60px;
+}
+
+.colorPicker .twod {
+    float: left;
+    margin: 0.5em;
+    border-radius: 6px;
+}
+
+/* main dimensions */
+.colorPicker .twod, .colorPicker .twod .bg {
+    width: 110px;
+    height: 110px;
+}
+.colorPicker .oned, .colorPicker .oned .bg {
+    height: 110px;
+}
+.colorPicker .oned, .colorPicker .oned .bg, .colorPicker .oned .pointer .shape {
+    width: 15px;
+}
+
+.colorPicker .twod .bg {
+    position: absolute;
+
+    /* These seem to cause issues in some browsers, careful!
+    border: 1px solid #BBB;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    */
+}
+.colorPicker .twod .pointer {
+    position: relative;
+    z-index: 2;
+    width: 8px;
+}
+.colorPicker .twod .pointer .shape {
+    position: absolute;
+}
+.colorPicker .twod .pointer .shape1 {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: 2px solid #2b2b2b;
+    -moz-border-radius: 5px;
+    border-radius: 50%;
+
+}
+.colorPicker .twod .pointer .shape2 {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border: 2px solid white;
+    -moz-border-radius: 4px;
+    border-radius: 50%;
+}
+
+.colorPicker .oned {
+	position: relative;
+	left: 120px;
+    margin: 0.5em;
+    margin-left: 0px;
+}
+
+.colorPicker .oned .bg {
+    border-radius: 6px;
+}
+.colorPicker .oned .pointer {
+    position: relative;
+    z-index: 2;
+}
+.colorPicker .oned .pointer .shape {
+    position: absolute;
+    margin-left: -2px;
+    margin-top: -4px;
+    height: 4px;
+    border: 2px solid #2b2b2b;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/* gradients, tweak as needed based on which browsers you want to support */
+.colorPicker .oned .bg {
+    background: -moz-linear-gradient(top,  #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 66%, #ff00ff 83%, #ff0000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(17%,#ffff00), color-stop(33%,#00ff00), color-stop(50%,#00ffff), color-stop(66%,#0000ff), color-stop(83%,#ff00ff), color-stop(100%,#ff0000));
+    background: -webkit-linear-gradient(top,  #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    background: -o-linear-gradient(top,  #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    background: linear-gradient(to bottom,  #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+}
+
+.colorPicker .twod .bg1 {
+    z-index: 0;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+.colorPicker .twod .bg2 {
+    z-index: 1;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+}
+
+#hslPicker .twod .bg1 {
+    background: -moz-linear-gradient(left,  #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 66%, #ff00ff 83%, #ff0000 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(17%,#ffff00), color-stop(33%,#00ff00), color-stop(50%,#00ffff), color-stop(66%,#0000ff), color-stop(83%,#ff00ff), color-stop(100%,#ff0000));
+    background: -webkit-linear-gradient(left, #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    background: -o-linear-gradient(left, #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+    background: linear-gradient(to right, #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 66%,#ff00ff 83%,#ff0000 100%);
+}
+
+#hslPicker .twod .bg2 {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(127,127,127,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(127,127,127,1)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(127,127,127,1) 100%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(127,127,127,1) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(127,127,127,1) 100%);
+}
+
+#hslPicker .oned .bg {
+    z-index: 1;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(0,0,0,0),rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);
+}
+
+#hslPicker .extras {
+    width: 100px;
+}
+
+#hslPicker .oned.alpha {
+    margin: 0;
+}
+
+#hslPicker .oned.alpha .bg {
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+}
+
+
+
+
+.choosecolor:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.color {
+	position: fixed;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #fff;
+	left: 10px;
+}
+
+.color:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+#color1 {
+	top: 55px;
+	background-color: #000;
+}
+
+#color2 {
+	top: 90px;
+	background-color: #B10B0B;
+}
+
+#color3 {
+	top: 125px;
+	background-color: #5C9226;
+}
+
+#color4 {
+	top: 160px;
+	background-color: #fff;
+}
+
+#color5 {
+	top: 195px;
+	background-color: #284AFF;
+}
+
+/* Стили для слайдера */
+
+.chooswidthslider {
+	writing-mode: bt-lr; /* IE */
+	-webkit-appearance: none;
+	transform: rotate(-90deg);
+    position: fixed;
+	top: 301px;
+	left: -41.5px;
+	width: 127px;
+	height: 6px;
+	margin: 0;
+	border-radius: 6px;
+}
+
+/* Webkit */
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	background-color: #fff;
+	border: 1px solid #2C2C2C;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+ 
+/* Firefox  */
+
+input[type=range]::-moz-range-thumb {
+	-webkit-appearance: none !important;
+	background-color: #fff;
+	border: 1px solid #2C2C2C;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+/* IE */
+
+input[type=range]::-ms-thumb {
+	-webkit-appearance: none !important;
+	background-color: #fff;
+	border: 1px solid #2C2C2C;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.exitbutton {
+	z-index: 1500;
+}
+
+.exit {
+	position: fixed;
+	bottom: 10px;
+	left: 12px;
+	z-index: 1500;
+}
+
+.exit:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.erase {
+	position: fixed;
+	left: 14px;
+	top: 387px;
+}
+
+
+.erase:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+/*Chat*/
+
+.chatbox {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	width: 301px;
+	height: 100%;
+	border-left: 3px solid #2C2C2C;
+	background-color: #fafafa;
+}
+
+.letter {
+	font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    width: 18px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.drawing .word li {
+    font-weight: 700;
+    font-size: 1em;
+    display: inline-block;
+    color: #000;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    width: 26px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.drawing .word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: default;
+    line-height: 1em;
+    margin: 0 auto;
+    padding: 5px 35px 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+}
+
+#keyword {
+	display: none; 
+	position: absolute;
+    top: 20px;
+    left: 45px;
+    right: 304px;
+    cursor: default;
+    line-height: 1em;
+    margin: 0 auto;
+    padding: 5px 35px 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+}
+
+#progressbar {
+	position: absolute;
+    top: 10px;
+    left: 45px;
+    right: 304px;
+    width: 300px;
+    z-index: 2;
+    cursor: default;
+    margin: 0 auto;
+    display: block;
+}
+
+#bar {
+	position: absolute;
+	height: 4px;
+	left: 11px;
+	width: calc(100% - 22px);
+	border: 1px solid #2C2C2C;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+#filler {
+	position: absolute;
+	height: 6px;
+	left: 11px;
+	border-radius: 4px;
+	background-color: #2C2C2C;
+	width: 0px;
+}
+
+.inputmessagebox {
+	position: absolute;
+	background-color: #2C2C2C;
+	width: 100%;
+	bottom: 0px;
+	height: 45px;
+}
+
+.inputmessage {
+	top: 10px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 10px;
+	height: 25px;
+	width: 227px;
+	border: none;
+	padding: 0;
+	padding-left: 9px;
+	left: 11px;
+}
+
+.inputmessage::-webkit-input-placeholder {
+	line-height: 25px;
+	font-family: "Roboto Condensed";
+	font-size: 14px;
+	color: #8C8A8A;
+	opacity: 1;
+}
+
+.sendmsg {
+	position: fixed;
+	right: 10px;
+	bottom: 12px;
+	width: 32px;
+	height: 22px;
+}
+
+.sendmsgimg {
+	position: fixed;
+	right: 10px;
+	bottom: 12px;
+}
+
+.sendmsgimg:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.message {
+	line-height: 20px;
+	margin-bottom: 6px;
+	font-family: "Roboto Condensed";
+	font-size: 14px;
+	width: calc(100% - 40px);
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.msgsender {
+	font-weight: bold;
+}
+
+.msgtext {
+	display: inline-block;	
+}
+
+.messages {
+	box-sizing: border-box;
+	padding-top: 74px;
+	height: calc(100% - 45px);
+	display: flex;
+	flex-direction: column-reverse;
+	overflow-y: scroll;
+}
+
+.messages::-webkit-scrollbar { width: 0; }
+ 
+.messages { -ms-overflow-style: none; }
+ 
+.messages { overflow: -moz-scrollbars-none; }
+
+/*players_list*/
+
+.players_btn_box {
+	position: absolute;
+	bottom: 57px;
+	left: 11px;
+	z-index: 600;
+}
+
+.players_btn_box:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.players_list {
+	position: absolute;
+	right: 0px;
+	padding-top: 15px;
+	font-size: 14px;
+	width: calc(100% - 31px);
+	display: block;
+	background-image: linear-gradient(to top right, #E51A65, #2443E5);
+	padding-right: 19px;
+	padding-left: 12px;
+}
+
+.roundbox {
+	text-align: center;
+	color: #fff;
+	padding-bottom: 15px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.players_player {
+	color: #fff;
+	padding-bottom: 15px;
+}
+
+.players_player b {
+	font-weight: bold;
+}
+
+.hostBrush {
+	float: left;
+	margin-right: -5px;
+}
+
+.player_name {
+	display: inline-block;
+	line-height: 14px;
+	padding-left: 9px;
+}
+
+.player_points {
+	display: inline;
+	float: right;
+	text-align: center;
+}
+
+/*winscreen*/
+.winscreen {
+	display: none;
+	position: absolute;
+	width: calc(100% - 304px);
+	height: 100%;
+	background-color: rgba(44, 44, 44, 0.85);
+	z-index: 600;
+}
+
+.choosescreen {
+	position: absolute;
+	width: calc(100% - 304px);
+	height: 100%;
+	background-color: rgba(44, 44, 44, 0.85);
+	z-index: 600;
+}
+
+.winscreenattr {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+}
+
+.finalscreenattr {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+}
+
+
+/*-----------------------------
+
+.player_name {
+	display: inline-block;
+	line-height: 14px;
+	padding-left: 9px;
+}
+
+.player_points {
+	display: inline;
+	float: right;
+	text-align: center;
+}
+
+.players_list {
+	position: absolute;
+	right: 0px;
+	padding-top: 15px;
+	font-size: 14px;
+	width: calc(100% - 31px);
+	display: block;
+	background-image: linear-gradient(to top right, #E51A65, #2443E5);
+	padding-right: 19px;
+	padding-left: 12px;
+}
+
+.roundbox {
+	text-align: center;
+	color: #fff;
+	padding-bottom: 15px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.players_player {
+	color: #fff;
+	padding-bottom: 15px;
+}
+
+-----------------------------*/
+
+
+
+#keywordshow, #final_keywordshow {
+	top: 15%;
+	padding-top: 15px;
+	font-size: 48px;
+	height: 57px;
+	line-height: 57px;
+	font-weight: 500;
+}
+
+#final_keywordshow {
+	top: 10px;
+}
+
+#roundwinner, #final_roundwinner {
+	top: calc(15% + 150px);
+	font-size: 24px;
+}
+
+#final_roundwinner {
+	line-height: 29px;
+	top: 95px;
+}
+
+#drawer, #final_drawer {
+	top: calc(15% + 110px);
+	font-size: 24px;
+}
+
+#final_drawer {
+	line-height: 29px;
+	top: 67px;
+}
+
+#final_title {
+	top: 21.519%;
+	font-size: 48px;
+	font-weight: 500;
+	padding-bottom: 40px;
+}
+
+#waiting_for_game {
+	padding-bottom: 11px;
+	font-size: 20px;
+	line-height: 29px;
+}
+
+#final_score {
+	margin: 0 auto;
+	top: calc(21.519% + 80px);
+	width: 254px;
+	left: 50%;
+	font-size: 24px;
+	font-weight: 100;
+}
+
+.finalscreen {
+	display: flex;
+	display: none;
+	justify-content: space-between;
+	flex-direction: column;
+	position: absolute;
+	width: calc(100% - 304px);
+	height: 100%;
+	background-color: rgba(44, 44, 44, 0.85);
+	z-index: 600;
+}
+
+#ingamecurrentround {
+	top: calc(9.177% + 120px);
+	font-size: 14px;
+}
+
+#score {
+	top: calc(9.177% + 186px);
+}
+
+.player {
+	width: 225px;
+	display: inline-block;
+	text-align: left;
+	font-size: 24px;
+}
+
+.points {
+	display: inline;
+	font-size: 24px;
+}
+
+.playerbox {
+	margin-bottom: 15px;
+}
+
+.choosescreen {
+	display: none;
+}
+
+#chooseword {
+	position: absolute;
+	top: 86px;
+	font-size: 38px;
+}
+
+.chooseword {
+	position: absolute;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	font-size: 32px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#firstword {
+	top: 185px;
+}
+
+#secondword {
+	top: 239px;
+}
+
+#thirdword {
+	top: 293px;
+}
+
+.chooseword:hover {
+	cursor: pointer;
+	color: #C6C6C6;
+}

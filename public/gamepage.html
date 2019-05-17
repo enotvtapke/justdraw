@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Just Draw</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+</head>
+<body>
+	<div id="gamepage">
+		<div class="moddedwords">
+			
+		</div>
+		<div class="toolpanel">
+			<img class="choosecolor" src="img/ChooseColor.svg" alt="">
+			<div class="colors">
+				<div class="color" id="color1"></div>
+				<div class="color" id="color2"></div>
+				<div class="color" id="color3"></div>
+				<div class="color" id="color4"></div>
+				<div class="color" id="color5"></div>
+			</div>
+			<div class="chooswidth">
+				<input class="chooswidthslider" orient="vertical" type="range" step="0.05" value="5.5" min="1" max="10">
+			</div>
+			<div class="erase">
+				<img src="img/Eraser.svg" alt="Очистить" class="eraser" onselectstart="console.log (1); return false" onmousedown="console.log (1); return false">
+			</div>
+			<div class="exit">
+				<img class="exitbutton" src="img/Exit.svg" alt="Выйти" onselectstart="return false" onmousedown="return false">
+			</div>
+		</div>
+		<div id="canvdiv" class="paintcanvas">
+			<canvas id="canvas" style="display: block;">Canvas can not be download</canvas>
+		</div>
+		<ul id="keyword">
+		</ul>
+		<div id="progressbar">
+			<div id="bar"></div>
+			<div id="filler"></div>
+		</div>
+		<div class="winscreen">
+			<div class="winscreenattr" id="keywordshow"></div>
+			<div class="winscreenattr" id="drawer">Рисовал: <em id="drawerNick"></em></div>
+			<div class="winscreenattr" id="roundwinner">Угадал: <em id="winnerNick"></em></div>
+		</div>
+		<div class="choosescreen">
+			<div class="winscreenattr" id="chooseword">Выберите слово</div>
+			<div class="keywordslist">
+				<div class="chooseword" id="firstword"></div>
+				<div class="chooseword" id="secondword"></div>
+				<div class="chooseword" id="thirdword"></div>
+			</div>
+		</div>
+		<div class="chatbox">
+			<div class="players_list">
+				<div class="roundbox">Раунд <em id="round">13</em> из <em id="maxround">15</em></div>
+				<div class="players_list_players">
+				</div>
+			</div>
+			<div class="messages">
+				<div class="message">
+					<div class="msgtext">
+						<b class="msgsender">Enotvtapke: </b>пылесос
+					</div>
+				</div>
+			</div>
+			<div class="inputmessagebox">
+				<input type="text" class="inputmessage" placeholder="Введите сообщение">
+				<div class="sendmsg">
+					<img class="sendmsgimg" src="img/Send.svg" alt="Отправить">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		let bar = document.querySelector("#filler");
+		let max = document.querySelector("#bar").offsetWidth;
+		let roundTimer = true;
+
+		let roundtime = 100000;
+		let start = Date.now();
+		let timer = setInterval(function() {
+			let timePassed = Date.now() - start;
+
+		  	if ((timePassed >= roundtime) || (!roundTimer)) {
+				bar.style.width = max + "px";
+		    	clearInterval(timer);
+		    	return;
+		  	}
+
+			bar.style.width = timePassed / (roundtime / max) + "px";
+		}, 20);
+	</script>
+</footer>
